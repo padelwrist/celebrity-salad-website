@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://celebrity-salad.com/</loc>
-    <lastmod>2026-09-12</lastmod>
-  </url>
-  <url>
-    <loc>https://celebrity-salad.com/privacy/</loc>
-    <lastmod>2026-09-12</lastmod>
-  </url>
+  <url><loc>https://celebrity-salad.com/</loc><lastmod>2026-09-12</lastmod></url>
+  <url><loc>https://celebrity-salad.com/guides/</loc><lastmod>2026-09-12</lastmod></url>
+  <url><loc>https://celebrity-salad.com/how-to-play-celebrity-salad/</loc><lastmod>2026-09-12</lastmod></url>
+  <url><loc>https://celebrity-salad.com/celebrity-game/</loc><lastmod>2026-09-12</lastmod></url>
+  <url><loc>https://celebrity-salad.com/salad-bowl-game/</loc><lastmod>2026-09-12</lastmod></url>
+  <url><loc>https://celebrity-salad.com/celebrity-name-ideas/</loc><lastmod>2026-09-12</lastmod></url>
+  <url><loc>https://celebrity-salad.com/privacy/</loc><lastmod>2026-09-12</lastmod></url>
 </urlset>
