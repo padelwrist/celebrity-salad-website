@@ -1,0 +1,67 @@
+name: One-time SEO tidy
+
+on:
+  push:
+    paths:
+      - '.github/workflows/seo-tidy.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  tidy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Apply SEO tidy-up
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          files = list(Path('public').rglob('*.html'))
+          for path in files:
+              text = path.read_text(encoding='utf-8')
+
+              if 'rel="icon"' not in text:
+                  text = re.sub(
+                      r'(<meta name="theme-color" content="[^"]+">)',
+                      r'\1<link rel="icon" href="/favicon.svg" type="image/svg+xml">',
+                      text,
+                      count=1,
+                  )
+
+              if '"@type":"Article"' in text and '"datePublished"' not in text:
+                  text = text.replace(
+                      '"dateModified":"2026-09-12"',
+                      '"datePublished":"2026-09-12","dateModified":"2026-09-12","image":"https://celebrity-salad.com/assets/celebrity-salad-card.svg"',
+                      1,
+                  )
+
+              if path == Path('public/index.html') and 'application/ld+json' not in text:
+                  schema = '<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Celebrity Salad","url":"https://celebrity-salad.com/","description":"The celebrity guessing game for parties."}</script>'
+                  text = text.replace('</head>', schema + '</head>', 1)
+
+              if path == Path('public/guides/index.html') and 'application/ld+json' not in text:
+                  schema = '<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Celebrity Salad Guides","url":"https://celebrity-salad.com/guides/","description":"Rules, name ideas and practical party game guides from Celebrity Salad."}</script>'
+                  text = text.replace('</head>', schema + '</head>', 1)
+
+              path.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Commit tidy-up
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "No changes required"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public
+          git commit -m "Tidy site SEO metadata"
+          git push
