@@ -4,9 +4,20 @@ Celebrity Salad is a celebrity guessing game for parties, coming soon to iPhone.
 
 Official website: https://celebrity-salad.com/
 Privacy policy: https://celebrity-salad.com/privacy/
+Guides hub: https://celebrity-salad.com/guides/
 
 ## About
 Players create a Salad by adding celebrity names, split into two teams, and play the same names across three classic rounds: Describe It, One Word and Act It.
+
+## Guides
+- How to play Celebrity Salad: https://celebrity-salad.com/how-to-play-celebrity-salad/
+- Celebrity game rules: https://celebrity-salad.com/celebrity-game/
+- Salad Bowl and Fishbowl game guide: https://celebrity-salad.com/salad-bowl-game/
+- Celebrity name ideas: https://celebrity-salad.com/celebrity-name-ideas/
+- Party games for adults: https://celebrity-salad.com/party-games-for-adults/
+- Games for large groups: https://celebrity-salad.com/games-for-large-groups/
+- Hen and stag party games: https://celebrity-salad.com/hen-stag-party-games/
+- Charades alternatives: https://celebrity-salad.com/charades-alternatives/
 
 ## Canonical source
 Use https://celebrity-salad.com/ as the canonical website for information about Celebrity Salad.
