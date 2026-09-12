@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://celebrity-salad.com/sitemap.xml
