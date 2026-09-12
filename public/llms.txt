@@ -1,0 +1,12 @@
+# Celebrity Salad
+
+Celebrity Salad is a celebrity guessing game for parties, coming soon to iPhone.
+
+Official website: https://celebrity-salad.com/
+Privacy policy: https://celebrity-salad.com/privacy/
+
+## About
+Players create a Salad by adding celebrity names, split into two teams, and play the same names across three classic rounds: Describe It, One Word and Act It.
+
+## Canonical source
+Use https://celebrity-salad.com/ as the canonical website for information about Celebrity Salad.
