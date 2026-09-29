@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Celebrity Salad Privacy Policy</title>
-  <meta name="description" content="Celebrity Salad privacy policy covering app data, website hosting, support information and your privacy rights.">
+  <meta name="description" content="Celebrity Salad privacy policy covering app data, analytics, website cookies, support information and your privacy rights.">
   <meta name="robots" content="index,follow,max-snippet:-1">
   <meta name="theme-color" content="#5b35d5"><link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="canonical" href="https://celebrity-salad.com/privacy/">
@@ -22,7 +22,7 @@
     "url": "https://celebrity-salad.com/privacy/",
     "description": "Privacy information for the Celebrity Salad app and website.",
     "inLanguage": "en-GB",
-    "dateModified": "2026-09-12"
+    "dateModified": "2026-09-29"
   }
   </script>
   <style>
@@ -39,7 +39,7 @@
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behaviour: smooth; }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -62,14 +62,14 @@
     header {
       min-height: 82px;
       display: flex;
-      align-items: centre;
+      align-items: center;
       justify-content: space-between;
       gap: 24px;
     }
 
     .brand {
       display: inline-flex;
-      align-items: centre;
+      align-items: center;
       gap: 10px;
       text-decoration: none;
       font-size: 13px;
@@ -82,7 +82,7 @@
       width: 34px;
       height: 34px;
       display: grid;
-      place-items: centre;
+      place-items: center;
       border-radius: 11px;
       background: var(--gold);
       color: var(--ink);
@@ -187,7 +187,7 @@
 
     .number {
       display: inline-grid;
-      place-items: centre;
+      place-items: center;
       width: 34px;
       height: 34px;
       border-radius: 11px;
@@ -220,7 +220,7 @@
     footer {
       padding: 28px 0 36px;
       display: flex;
-      align-items: centre;
+      align-items: center;
       justify-content: space-between;
       gap: 20px;
       color: #746a7f;
@@ -261,7 +261,7 @@
         <p class="eyebrow">Privacy</p>
         <h1>Your game stays your game.</h1>
         <p>This policy explains how Celebrity Salad handles information when you use the app, visit this website or contact us.</p>
-        <span class="updated">Last updated 12 September 2026</span>
+        <span class="updated">Last updated 29 September 2026</span>
       </div>
     </div>
   </div>
@@ -270,11 +270,11 @@
     <aside class="contents" aria-label="Privacy policy contents">
       <strong>Contents</strong>
       <a href="#who">Who we are</a>
-      <a href="#app-data">App & game data</a>
-      <a href="#analytics">Analytics & tracking</a>
+      <a href="#app-data">App &amp; game data</a>
+      <a href="#analytics">App analytics</a>
       <a href="#permissions">Device permissions</a>
       <a href="#apple">Apple services</a>
-      <a href="#website">Website data</a>
+      <a href="#website">Website analytics &amp; cookies</a>
       <a href="#support">Support</a>
       <a href="#sharing">Sharing</a>
       <a href="#retention">Retention</a>
@@ -287,23 +287,24 @@
         <span class="number">01</span>
         <h2>Who we are</h2>
         <p>Celebrity Salad is operated in the United Kingdom and is the controller of personal information processed by us in connection with the Celebrity Salad app and website.</p>
-        <p>Celebrity Salad is designed to collect as little information as reasonably possible. The current app does not require an account, profile or login, and we do not sell personal information.</p>
+        <p>Celebrity Salad is designed to collect as little information as reasonably possible. The app does not require an account, profile or login, and we do not sell personal information.</p>
       </section>
 
       <section id="app-data">
         <span class="number">02</span>
         <h2>App and game data</h2>
         <p>Celebrity Salad needs some information to run the game on your device. Depending on how you play, this can include player names, team names, celebrity names submitted by players, game settings, round order, turn information, scores and the current game state.</p>
-        <p><strong>In the current version, this game information is handled locally on your device and is not transmitted by Celebrity Salad to us or to a Celebrity Salad server.</strong> There is no Celebrity Salad account, remote multiplayer service or cloud synchronisation in the current release.</p>
+        <p><strong>This gameplay content is handled locally on your device and is not sent to PostHog or to a Celebrity Salad server.</strong> There is no Celebrity Salad account, remote multiplayer service or cloud synchronisation in the current release.</p>
         <p>You control the names you enter. Player names do not need to be real names. If you enter information about another person, you should only enter information appropriate for an in-person party game.</p>
       </section>
 
       <section id="analytics">
         <span class="number">03</span>
-        <h2>Analytics, advertising and tracking</h2>
-        <p>The current version of Celebrity Salad does not include a third-party product analytics SDK, advertising SDK or cross-app tracking technology.</p>
-        <p>We do not use advertising identifiers, sell personal information, or track you across apps or websites owned by other companies. Celebrity Salad does not display third-party advertising during gameplay.</p>
-        <p>If we introduce app analytics, advertising or another technology that materially changes the data we collect, we will update this policy and any App Store privacy information before or alongside the relevant release.</p>
+        <h2>Product analytics and error tracking in the app</h2>
+        <p>Celebrity Salad uses <strong>PostHog</strong> to help us understand how the app is used, identify crashes and software errors, and improve the product. PostHog is configured to use its European cloud infrastructure.</p>
+        <p>We send a deliberately limited set of machine-readable product and diagnostic information. This can include app version and build number, iPhone or iPad device class, release channel, game setup counts, round and turn counts, whether a game is completed or ended early, replay choice, Undo usage, How to Play or Salad Bar usage, and technical crash or error information.</p>
+        <p><strong>We do not intentionally send player names, team names, celebrity names, celebrity submissions, email addresses, contacts, precise location, advertising identifiers or arbitrary free text to PostHog.</strong> The app does not call PostHog identify, person profiles are disabled, and session replay, screen recording and automatic interaction capture are disabled.</p>
+        <p>PostHog may use a randomly generated anonymous identifier and standard technical information to distinguish app installations or sessions. We do not use this to determine your real-world identity. App analytics is not used for third-party advertising or cross-app tracking.</p>
       </section>
 
       <section id="permissions">
@@ -323,9 +324,12 @@
 
       <section id="website">
         <span class="number">06</span>
-        <h2>Website hosting and cookies</h2>
-        <p>The Celebrity Salad website does not currently use optional analytics or advertising cookies.</p>
-        <p>Our website hosting and security providers may process standard technical information necessary to deliver and protect the site, such as your IP address, browser or device information, pages requested, date and time of requests, and security or server logs. We use this information only to operate, secure and maintain the website.</p>
+        <h2>Website analytics, hosting and cookies</h2>
+        <p>The Celebrity Salad website uses <strong>Google Analytics 4 (GA4)</strong> to help us understand how the website is used. Google Analytics may process pages viewed, visits and session activity, approximate geographic information, browser and device information, referring source, website interactions and a pseudonymous browser identifier stored using first-party cookies.</p>
+        <p><strong>Google Analytics is optional and remains disabled unless you choose “Accept analytics” in the website's cookie controls.</strong> Rejecting analytics does not affect your ability to use the website.</p>
+        <p>If you accept, we use this information to understand website traffic and improve the site. We do not intentionally send names, email addresses or gameplay content to Google Analytics, and advertising-related Google signals and personalised-advertising signals are disabled.</p>
+        <p>You can change your choice at any time using the <strong>Cookie settings</strong> control in the website footer. If you withdraw consent, Google Analytics is disabled and we attempt to remove analytics cookies set for this site. Your consent choice itself is stored locally in your browser so that the site can remember it.</p>
+        <p>Our website hosting and security providers may also process standard technical information necessary to deliver and protect the site, such as your IP address, browser or device information, pages requested, date and time of requests, and security or server logs. This information is used to operate, secure and maintain the website.</p>
       </section>
 
       <section id="support">
@@ -341,18 +345,20 @@
         <p>Where UK GDPR or EU GDPR applies, we process personal information only where we have an appropriate lawful basis.</p>
         <ul class="plain-list">
           <li><strong>Providing a requested service:</strong> where processing is necessary to respond to a support request or provide something you have asked us to provide.</li>
-          <li><strong>Legitimate interests:</strong> where necessary to operate and secure the website, investigate software problems, prevent abuse and improve the service, balanced against your privacy rights.</li>
+          <li><strong>App analytics, diagnostics and improvement:</strong> where the limited anonymous or pseudonymous information we process through PostHog constitutes personal information, we rely on our legitimate interests in understanding product usage, maintaining reliability, identifying technical problems and improving Celebrity Salad. We minimise the privacy impact by excluding gameplay text and unnecessary personal information.</li>
+          <li><strong>Website analytics:</strong> where consent is required for Google Analytics cookies or similar technologies, we rely on your consent. You can withdraw that consent through the website's Cookie settings control.</li>
+          <li><strong>Operating and securing the website:</strong> we rely on our legitimate interests in operating, maintaining, securing and preventing abuse of the website.</li>
           <li><strong>Legal obligations:</strong> where we need to keep or disclose information to comply with applicable law.</li>
         </ul>
-        <p>Game information that remains only on your device is not received or processed by us.</p>
+        <p>Gameplay information that remains only on your device is not received or processed by us.</p>
       </section>
 
       <section id="sharing">
         <span class="number">09</span>
         <h2>Sharing information</h2>
         <p>We do not sell personal information.</p>
-        <p>We may use service providers where necessary to operate Celebrity Salad, such as Apple for App Store distribution and platform services, website hosting and security providers, and email providers used for support communications. Those providers process information under their own terms or, where they act on our behalf, under appropriate data-protection arrangements.</p>
-        <p>We may also disclose information where required by law, regulation or valid legal process.</p>
+        <p>We use third-party service providers where necessary to operate and improve Celebrity Salad. These may include PostHog for app product analytics and error tracking, Google Analytics for optional website analytics, Apple for App Store distribution and platform services, website hosting and security providers, and email providers used for support communications.</p>
+        <p>Those providers process information under their own terms or, where they act on our behalf, under appropriate data-protection arrangements. We may also disclose information where required by law, regulation or valid legal process.</p>
       </section>
 
       <section id="transfers">
@@ -364,7 +370,9 @@
       <section id="retention">
         <span class="number">11</span>
         <h2>How long we keep information</h2>
-        <p><strong>Game information:</strong> the current app keeps game information locally on your device rather than sending it to us. You can clear the current game by starting a new Salad, and removing the app removes app data held by the app from that device, subject to Apple's platform behaviour.</p>
+        <p><strong>Game information:</strong> the app keeps gameplay information locally on your device rather than sending it to us. You can clear the current game by starting a new Salad, and removing the app removes app data held by the app from that device, subject to Apple's platform behaviour.</p>
+        <p><strong>App analytics and diagnostics:</strong> PostHog analytics and diagnostic information is retained in accordance with our PostHog project configuration and only for as long as reasonably needed to understand usage, investigate reliability and improve the product.</p>
+        <p><strong>Website analytics:</strong> where you consent to Google Analytics, analytics information and associated identifiers are retained in accordance with our Google Analytics configuration. Your local cookie preference remains in your browser until you change it, clear browser storage or the browser removes it.</p>
         <p><strong>Website technical logs:</strong> hosting and security logs may be retained by our providers for limited periods needed for security, reliability and abuse prevention.</p>
         <p><strong>Support correspondence:</strong> we keep support and feedback messages only for as long as reasonably necessary to respond, investigate the issue, maintain appropriate records or meet legal requirements.</p>
       </section>
@@ -373,7 +381,8 @@
         <span class="number">12</span>
         <h2>Your rights and choices</h2>
         <p>Depending on where you live and the circumstances, you may have rights to access, correct or delete personal information we hold about you, restrict or object to certain processing, receive certain information in a portable format, withdraw consent where processing is based on consent, and complain to a data-protection regulator.</p>
-        <p>Because Celebrity Salad's current game data stays on your own device and is not sent to us, we generally cannot access, retrieve or delete that local game information for you. You control it through the app and your device.</p>
+        <p>You can withdraw or change website analytics consent at any time using <strong>Cookie settings</strong> in the website footer. Rejecting or withdrawing website analytics does not affect access to the website.</p>
+        <p>Because Celebrity Salad's gameplay data stays on your own device and is not sent to us, we generally cannot access, retrieve or delete that local gameplay information for you. You control it through the app and your device.</p>
         <p>If you are in the United Kingdom, you can complain to the Information Commissioner's Office (ICO). If you are in the European Economic Area, you may have the right to complain to the relevant data-protection authority in your country or region.</p>
       </section>
 
@@ -386,7 +395,7 @@
       <section id="changes">
         <span class="number">14</span>
         <h2>Changes to this policy</h2>
-        <p>We may update this policy as Celebrity Salad develops, particularly if we introduce features such as app analytics, cloud sync, remote multiplayer, accounts or paid content. Where a change materially affects how we use personal information, we will provide any additional notice or request any permission required by law or platform rules.</p>
+        <p>We may update this policy as Celebrity Salad develops, particularly if we introduce features such as cloud sync, remote multiplayer, accounts, paid content or materially different analytics technology. Where a change materially affects how we use personal information, we will provide any additional notice or request any permission required by law or platform rules.</p>
         <p>The latest version will always be published at this address with an updated “Last updated” date.</p>
       </section>
 
