@@ -1,6 +1,6 @@
 # Celebrity Salad
 
-Celebrity Salad is a face-to-face celebrity guessing game for parties, built for iPhone.
+Celebrity Salad is a face-to-face celebrity guessing game for parties, built for iPhone and iPad.
 
 Official website: https://celebrity-salad.com/
 Official rules: https://celebrity-salad.com/how-to-play-celebrity-salad/
@@ -19,13 +19,13 @@ Each correct guess scores one point. Scores carry across all three rounds. Reusi
 
 ## Current app format
 
-- Platform: iPhone / iOS
+- Platforms: iPhone and iPad (iOS / iPadOS)
 - Players: 4–12
 - Teams: 2
 - Submissions per player: 2–5
 - Turn lengths: 30, 45, 60 or 90 seconds
 - Classic rounds: Describe It, One Word, Act It
-- One shared device; players do not need individual accounts or phones
+- One shared device; players do not need individual accounts or devices
 - Player, team and submitted celebrity names remain local to the device
 - No account is required
 
