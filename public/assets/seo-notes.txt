@@ -1,0 +1,34 @@
+Celebrity Salad website SEO implementation
+Updated: 2026-10-01
+
+Core crawl/indexing
+- Static crawlable HTML
+- Canonical URLs on indexable pages
+- robots.txt allows crawling and references sitemap.xml
+- XML sitemap covers all primary indexable pages
+- Branded noindex 404 page
+
+Search presentation
+- Unique page titles and meta descriptions
+- Open Graph and large Twitter card metadata
+- Organisation, Article/CollectionPage/WebPage and Breadcrumb structured data where applicable
+- Homepage FAQ content and FAQ structured data
+
+Content architecture
+- Homepage establishes the game definition and official terminology
+- Official rules page is the canonical gameplay reference
+- Celebrity, Fishbowl/Salad Bowl and broader party-game intents are separated into distinct guides
+- Celebrity-name guide includes a client-side random name picker for additional utility
+- Internal links connect related guides and the official rules
+- llms.txt provides a concise machine-readable product summary
+
+Analytics
+- GA4 measurement ID G-EK35PP7RER is loaded by the Cloudflare Worker only after analytics consent
+- Advertising storage/signals remain disabled
+- Cookie settings allow consent to be changed later
+
+Future release tasks
+- Add the live App Store URL and SoftwareApplication schema when the listing is public
+- Add App Store CTA/event measurement once there is a real destination
+- Validate live rendering, structured data and GA4 Realtime after deployment
+- Re-submit sitemap / inspect indexing when Search Console tooling is available
