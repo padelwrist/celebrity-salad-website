@@ -2,3 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://celebrity-salad.com/sitemap.xml
+
+# Machine-readable product summary
+# https://celebrity-salad.com/llms.txt
