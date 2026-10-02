@@ -76,11 +76,17 @@ main.shell>section>h2{margin:0 0 var(--m3-space-6)!important;font-family:var(--f
 
 @media(min-width:840px) and (max-width:1199px){
   .shell{width:min(1200px,calc(100% - 80px))!important}
+  .game-table,.alt-table{display:table!important;overflow:visible!important;white-space:normal!important}
+  .size-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+  .difficulty{grid-template-columns:repeat(3,minmax(0,1fr))!important}
 }
 
 @media(min-width:600px) and (max-width:839px){
   .shell{width:calc(100% - 64px)!important}
   .cards{gap:var(--m3-space-4)!important}
+  .game-table,.alt-table{display:table!important;overflow:visible!important;white-space:normal!important}
+  .size-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .difficulty{grid-template-columns:repeat(3,minmax(0,1fr))!important}
 }
 
 @media(max-width:599px){
