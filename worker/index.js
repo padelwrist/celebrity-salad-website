@@ -111,11 +111,8 @@ const CONSENT_AND_ANALYTICS = `<style id="celebrity-salad-cookie-consent-styles"
     button.textContent = 'Cookie settings';
     button.addEventListener('click', showConsentBanner);
 
-    const guideLinks = footer.querySelector('.footer-inner > div:last-child');
-    const homeLinks = footer.matches('body > .shell footer') ? footer.querySelector(':scope > div:last-child') : null;
-    const links = guideLinks || homeLinks || footer.querySelector(':scope > div:last-child');
-
-    if (links && links.querySelector('a')) links.appendChild(button);
+    const links = footer.querySelector('nav') || footer.querySelector('.footer-inner > div:last-child') || footer.querySelector('.footer-grid > div:last-child');
+    if (links) links.appendChild(button);
     else footer.appendChild(button);
   }
 
@@ -136,7 +133,8 @@ const CONSENT_AND_ANALYTICS = `<style id="celebrity-salad-cookie-consent-styles"
 })();
 </script>`;
 
-const SITE_AUDIT_STYLES = '<link rel="stylesheet" href="/assets/m3-audit.css">';
+const SITE_FOUNDATION_STYLES = '<link rel="stylesheet" href="/assets/m3-audit.css">';
+const SITE_FAMILY_SCRIPT = '<script src="/assets/site-family.js" defer></script>';
 
 export default {
   async fetch(request, env) {
@@ -151,7 +149,8 @@ export default {
       .on('head', {
         element(element) {
           element.prepend(CONSENT_AND_ANALYTICS, { html: true });
-          element.append(SITE_AUDIT_STYLES, { html: true });
+          element.append(SITE_FOUNDATION_STYLES, { html: true });
+          element.append(SITE_FAMILY_SCRIPT, { html: true });
         },
       })
       .transform(response);
