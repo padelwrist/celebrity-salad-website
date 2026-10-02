@@ -136,6 +136,8 @@ const CONSENT_AND_ANALYTICS = `<style id="celebrity-salad-cookie-consent-styles"
 })();
 </script>`;
 
+const SITE_AUDIT_STYLES = '<link rel="stylesheet" href="/assets/m3-audit.css">';
+
 export default {
   async fetch(request, env) {
     const response = await env.ASSETS.fetch(request);
@@ -149,6 +151,7 @@ export default {
       .on('head', {
         element(element) {
           element.prepend(CONSENT_AND_ANALYTICS, { html: true });
+          element.append(SITE_AUDIT_STYLES, { html: true });
         },
       })
       .transform(response);
