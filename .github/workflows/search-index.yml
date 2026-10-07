@@ -1,0 +1,69 @@
+name: Search indexing
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'public/**'
+      - 'scripts/generate_sitemap.py'
+      - 'scripts/submit_indexnow.py'
+      - '.github/workflows/search-index.yml'
+      - '!public/sitemap.xml'
+  workflow_dispatch:
+    inputs:
+      submit_all:
+        description: Submit all sitemap URLs to IndexNow
+        required: false
+        default: true
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: search-index-main
+  cancel-in-progress: false
+
+jobs:
+  sitemap-and-indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Generate sitemap from canonical pages
+        run: python3 scripts/generate_sitemap.py
+
+      - name: Commit sitemap when it changed
+        shell: bash
+        run: |
+          if git diff --quiet -- public/sitemap.xml; then
+            echo "Sitemap already current."
+            exit 0
+          fi
+          git config user.name "Celebrity Salad Search Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public/sitemap.xml
+          git commit -m "Update sitemap"
+          git push
+
+      - name: Submit URLs to IndexNow
+        shell: bash
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+          EVENT_NAME: ${{ github.event_name }}
+          SUBMIT_ALL: ${{ inputs.submit_all }}
+        run: |
+          if [ "$EVENT_NAME" = "workflow_dispatch" ] && [ "$SUBMIT_ALL" = "true" ]; then
+            python3 scripts/submit_indexnow.py --all
+          else
+            python3 scripts/submit_indexnow.py --before "$BEFORE_SHA" --after "$AFTER_SHA"
+          fi
