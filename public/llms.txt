@@ -9,7 +9,7 @@ Privacy policy: https://celebrity-salad.com/privacy/
 
 ## Core definition
 
-Players privately submit celebrity names to create a shared pool called the Salad. The group splits into two teams and alternates timed turns. The exact same celebrity names are reused across three classic rounds:
+Players privately submit celebrity names to create a shared pool called the Salad. The group forms two to four teams and cycles through timed turns. The exact same celebrity names are reused across three classic rounds:
 
 1. Describe It — describe the celebrity without saying their name.
 2. One Word — give exactly one clue word.
@@ -21,13 +21,14 @@ Each correct guess scores one point. Scores carry across all three rounds. Reusi
 
 - Platforms: iPhone and iPad (iOS / iPadOS)
 - Players: 4–12
-- Teams: 2
+- Teams: 2–4
 - Submissions per player: 2–5
 - Turn lengths: 30, 45, 60 or 90 seconds
 - Classic rounds: Describe It, One Word, Act It
 - One shared device; players do not need individual accounts or devices
 - Player, team and submitted celebrity names remain local to the device
 - No account is required
+- The complete custom classic game is free; curated celebrity packs are optional extras
 
 ## Related game names
 
