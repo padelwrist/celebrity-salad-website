@@ -35,19 +35,19 @@ Keep these aligned with PadelWrist unless there is a clear product-specific reas
 - footer aligned to the same responsive grid as the rest of the page
 - consent controls following the same component anatomy and accessibility rules
 
-Do not copy PadelWrist's dark theme, sports photography, Montserrat branding or product-specific component styling into Celebrity Salad.
+Do not copy PadelWrist's dark theme, sports photography, Montserrat branding or product-specific component styling into Celebrity Salad. Do not reintroduce legacy Stage Violet as a reusable interface colour; any purple inside the authored wordmark is asset-local.
 
 ## Brand that stays fixed
 
-- Stage Violet, Cream, Gold and the established round colours
+- Garden Flash palette: Ink, Cream, Tomato, Lemon, Cucumber, Onion and Aubergine
 - Celebrity Salad authored wordmark
-- Gold Celebrity Star
-- Ingredient cast artwork
 - Physical card/deck language
 - Condensed display typography with the existing body-system stack
 - Light, tactile, playful tone
+- Lemon reserved for the primary content action and winning emphasis
+- Consistent tactile depth: the Ink base extends left and below the face
 
-Do not replace authored brand assets with procedurally recreated versions.
+Decorative ingredient/star artwork is optional rather than structural. Do not use illustration to rescue weak hierarchy, and do not replace authored brand assets with procedurally recreated versions.
 
 ## Adaptive layout
 
