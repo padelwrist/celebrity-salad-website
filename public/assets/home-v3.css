@@ -6,6 +6,7 @@ body.home-v3{background:var(--cream);color:var(--ink)}
 .v3-hero{padding:var(--space-8) 0 var(--space-10)}
 .v3-hero-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--grid-gap);align-items:center}
 .v3-hero-copy{grid-column:1 / span 7;position:relative;z-index:2}
+.v3-hero-kicker{margin:0 0 var(--space-3);color:var(--ink);font:800 13px/1.25 var(--font-body);letter-spacing:.08em}
 .v3-hero h1,.v3-section-title,.v3-round-name,.v3-loop-title,.v3-guide-title,.v3-final-copy{font-family:var(--font-display);font-weight:800;letter-spacing:-.035em}
 .v3-hero h1{max-width:760px;margin:0;font-size:clamp(3.75rem,6.5vw,5.75rem);line-height:.94;text-wrap:balance}
 .v3-hero h1 .accent{color:var(--violet)}
