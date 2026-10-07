@@ -1,11 +1,11 @@
 :root{
-  --violet:#5b35b7;--violet-dark:#2a073d;--violet-soft:#f2edfc;--cream:#fff8ea;--cream-deep:#f4ead6;--ink:#2a073d;--muted:#685f72;--gold:#ffc72c;--blue:#335fff;--orange:#ff8d2b;--coral:#ff6b5e;--green:#45c85a;--red:#ff4038;--line:#d8cdb9;--white:#fff;
+  --ink:#151723;--cream:#FFF8EC;--cream-deep:#EBE7DF;--tomato:#FC553C;--lemon:#FEEA39;--cucumber:#52D273;--onion:#D982F4;--carrot:#FF9738;--aubergine:#6540B8;--subtle:#EBE7DF;--disabled:#CBC8C0;--correct:#087862;--skip:#A52F62;--destructive:#A72835;--muted:#5B5D67;--line:#D6D1C8;--white:#fff;--violet:var(--tomato);--violet-dark:var(--ink);--violet-soft:#FFF0EB;--gold:var(--lemon);--blue:var(--aubergine);--orange:var(--carrot);--coral:var(--onion);--green:var(--cucumber);--red:var(--destructive);
   --space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:24px;--space-6:32px;--space-7:40px;--space-8:48px;--space-9:64px;--space-10:80px;--space-11:96px;--space-12:128px;
-  --shape-s:12px;--shape-m:16px;--shape-l:24px;--shape-xl:32px;--shape-full:999px;
-  --layout-max:1200px;--gutter:40px;--grid-gap:32px;
+  --shape-s:12px;--shape-m:16px;--shape-l:24px;--shape-xl:28px;--shape-full:999px;
+  --layout-max:1280px;--gutter:32px;--grid-gap:24px;
   --font-display:"Asap Condensed","Avenir Next Condensed","Arial Narrow",sans-serif;
   --font-body:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,system-ui,sans-serif;
-  --shadow-card:6px 6px 0 var(--ink);
+  --shadow-card:-6px 6px 0 var(--ink);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -44,7 +44,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .hero-copy{grid-column:1 / span 7;position:relative;z-index:2}
 .hero-copy h1,.section-heading h2,.recipe-copy h2,.search-grid h2,.final-cta p,.memory-strip strong{font-family:var(--font-display);font-weight:800;letter-spacing:-.035em}
 .hero-copy h1{margin:0;max-width:780px;font-size:clamp(3.5rem,6.5vw,5.75rem);line-height:.95;text-wrap:balance}.hero-copy h1 span{color:var(--violet)}
-.hero-lede{max-width:680px;margin:var(--space-5) 0 0;font-size:18px;line-height:1.56;color:#4b4157}.hero-lede strong{color:var(--ink)}
+.hero-lede{max-width:680px;margin:var(--space-5) 0 0;font-size:18px;line-height:1.56;color:#4F515B}.hero-lede strong{color:var(--ink)}
 .hero-actions{display:flex;flex-wrap:wrap;gap:var(--space-3);margin-top:var(--space-6)}
 .availability{margin:var(--space-5) 0 0;font-size:14px;font-weight:700;color:var(--muted)}
 .hero-game{grid-column:8 / -1;position:relative;min-height:500px;display:grid;place-items:center}
