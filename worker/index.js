@@ -135,6 +135,8 @@ const CONSENT_AND_ANALYTICS = `<style id="celebrity-salad-cookie-consent-styles"
 
 const SITE_FOUNDATION_STYLES = '<link rel="stylesheet" href="/assets/m3-audit.css">';
 const SITE_FAMILY_SCRIPT = '<script src="/assets/site-family.js" defer></script>';
+const APP_STORE_BANNER = '<meta name="apple-itunes-app" content="app-id=6811644325">';
+const APP_STORE_FOOTER_LINK = '<a href="https://apps.apple.com/us/app/celebrity-salad-party-game/id6811644325" target="_blank" rel="noopener noreferrer" data-app-store-cta>Get the app</a>';
 
 export default {
   async fetch(request, env) {
@@ -151,6 +153,17 @@ export default {
           element.prepend(CONSENT_AND_ANALYTICS, { html: true });
           element.append(SITE_FOUNDATION_STYLES, { html: true });
           element.append(SITE_FAMILY_SCRIPT, { html: true });
+          element.append(APP_STORE_BANNER, { html: true });
+        },
+      })
+      .on('footer nav', {
+        element(element) {
+          element.append(APP_STORE_FOOTER_LINK, { html: true });
+        },
+      })
+      .on('footer .footer-inner > div', {
+        element(element) {
+          element.append(APP_STORE_FOOTER_LINK, { html: true });
         },
       })
       .transform(response);

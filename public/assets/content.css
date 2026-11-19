@@ -50,6 +50,12 @@ main{padding:var(--space-11) 0 var(--space-12)}
 .callout:before{content:"";position:absolute;right:var(--space-5);top:-28px;width:52px;height:52px;background:url('/assets/celebrity-star.svg') center/contain no-repeat;transform:rotate(10deg)}
 .callout strong{display:block;margin-bottom:var(--space-2);font:800 1.5rem/1.1 var(--font-display)}
 
+.download-strip{display:flex;align-items:center;justify-content:space-between;gap:var(--space-5);margin:var(--space-6) 0 var(--space-8);padding:var(--space-5) var(--space-6);border:3px solid var(--ink);border-radius:var(--shape-l);background:var(--lemon);box-shadow:var(--shadow-card)}
+.download-strip strong{display:block;margin-bottom:var(--space-2);font:800 1.5rem/1.08 var(--font-display)}
+.download-strip p{max-width:58ch;margin:0;color:var(--ink);line-height:1.55}
+.download-strip a{min-height:48px;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;padding:0 var(--space-5);border:2px solid var(--ink);border-radius:var(--shape-m);background:var(--ink);color:var(--cream);font-weight:800;text-align:center;text-decoration:none}
+.download-strip a:hover{background:#292B38}
+
 .steps{counter-reset:step;list-style:none;padding:0!important;border-top:3px solid var(--ink)}
 .steps li{position:relative;margin:0;padding:var(--space-5) 0 var(--space-5) 64px;border-bottom:2px solid var(--line);background:transparent}
 .steps li:before{counter-increment:step;content:counter(step);position:absolute;left:0;top:var(--space-5);width:40px;height:40px;display:grid;place-items:center;border-radius:50%;background:var(--gold);border:2px solid var(--ink);color:var(--ink);font-weight:900}
@@ -153,6 +159,8 @@ footer{border-top:3px solid var(--ink);padding:var(--space-6) 0 var(--space-7);c
   .article h2{margin-top:var(--space-9)}.article h3{margin-top:var(--space-7)}
   .article p,.article ul,.article ol{font-size:1rem}.article>p:first-of-type{font-size:1.0625rem}
   .callout{padding:var(--space-5)}
+  .download-strip{align-items:stretch;flex-direction:column;padding:var(--space-5)}
+  .download-strip a{width:100%}
   .cards{grid-template-columns:1fr;gap:var(--space-4)}.card{min-height:0;padding:var(--space-5)}
   .names{columns:1}.difficulty,.size-grid{grid-template-columns:1fr!important}
   .game-table,.alt-table,.compare{display:block;overflow-x:auto;white-space:nowrap;margin-inline:0}
